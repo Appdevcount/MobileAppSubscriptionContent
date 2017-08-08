@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2593a16b7563400ab02bf8716ba9cc48" Name="Diagram1">
+        <EntityTypeShape EntityType="WalletsModel.KYCParameter" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.KYCParametersCountry" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.KYCRatingRule" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.KYCRatingValidation" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.Profile" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.ProfilesKYC" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.ProfilesKYCHistory" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.SanctionsList" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.Wallet" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.WalletAccount" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.WalletTransaction" Width="1.5" PointX="7.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.WalletTypeCountry" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WalletsModel.WalletType" Width="1.5" PointX="0.75" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="WalletsModel.FK_KYCParametersCountries_KYCParameters" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletTypeCountries_KYCParameters" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_ProfilesKYC_Profiles" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_Wallet_Profiles" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletTransactions_Profiles" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_ProfilesKYCHistory_ProfilesKYC" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_ProfilesKYCHistory_ProfilesKYC1" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletAccounts_Wallet" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletAccounts_WalletTypeCountries" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletAccounts_WalletTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletTransactions_WalletAccounts" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletTransactions_WalletTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WalletsModel.FK_WalletTypeCountries_WalletTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

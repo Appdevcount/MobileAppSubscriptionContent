@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63fc9bc68bf7446bbef0ebae4564e8ef" Name="Diagram1" ZoomLevel="58">
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.Category" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerDevice" Width="1.5" PointX="12" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerMobileNoHistory" Width="1.5" PointX="12" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerOTP_SMSs" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerOTP" Width="1.5" PointX="14.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.Customer" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerWallet" Width="1.5" PointX="12" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerWalletTransaction" Width="1.5" PointX="14.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerWalletTransactionsCredit" Width="1.5" PointX="16.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.CustomerWalletTransactionsDebit" Width="1.5" PointX="16.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.LoyaltyCardCompany" Width="1.5" PointX="12.5" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.LoyaltyCardType" Width="1.5" PointX="14.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.LoyaltyCustomerCard" Width="1.5" PointX="17" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantCategory" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantCustomerRequest" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantInvoice" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantItemImage" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantItem" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantOrderItem" Width="1.5" PointX="7.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantOrder" Width="1.5" PointX="5.25" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantRequest" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.Merchant" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantTransaction" Width="1.5" PointX="3" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantUserCategory" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MerchantUser" Width="1.5" PointX="3" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.MyPaymentService" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.NewLoyaltyCard" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.PayitiSY" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.ThirdParty" Width="1.5" PointX="12" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.ThirdParty_knet_trans" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.ThirdPartyAppPrivilege" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.ThirdPartyApp" Width="1.5" PointX="0.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.ThirdPartyPrivilege" Width="1.5" PointX="17.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.UsersNWalletPrivilege" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.WalletImage" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PayitMerchantsnWalletsModel.WalletService" Width="1.5" PointX="12" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantCategories_MyPaymentsCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantItems_MyPaymentsCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerDevices_MyPaymentCustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerOTPs_MyPaymentCustomerDevices" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerMobileNoHistory_MyPaymentCustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerOTPs_MyPaymentCustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerOTPs_WalletServices" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_LoyaltyCustomerCards_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerWallets_MyPaymentCustomers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerWalletTransactions_MyPaymentCustomerWallets" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_CustomerWalletTransactions_ThirdParties" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerWalletTransactionsCredit_MyPaymentCustomerWalletTransactions" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentCustomerWalletTransactionsDebit_MyPaymentCustomerWalletTransactions" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_LoyaltyCardTypes_LoyaltyCardCompanies" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_LoyaltyCustomerCards_LoyaltyCardTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MerchantUserCategories_MyPaymentMerchantCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantCategories_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantCustomerRequests_MyPaymentMerchantItems" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantCustomerRequests_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantInvoices_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MerchantItemImages_MerchantItems" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantItems_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantOrderItems_MyPaymentMerchantItems" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantOrderItems_MyPaymentOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentOrders_MyPaymentMerchantServices" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentMerchantTransactions_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MyPaymentUsers_MyPaymentMerchants" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_MerchantUserCategories_MyPaymentUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_ThirdPartyApps_ThirdParties" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_ThirdPartyPrivileges_ThirdParties" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_ThirdPartyAppPrivileges_ThirdPartyApps" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_ThirdPartyAppPrivileges_UsersNWalletPrivileges" ManuallyRouted="false" />
+        <AssociationConnector Association="PayitMerchantsnWalletsModel.FK_ThirdPartyPrivileges_UsersNWalletPrivileges" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

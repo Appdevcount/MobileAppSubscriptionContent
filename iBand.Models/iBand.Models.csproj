@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A0B2B31-91D5-4FAC-ACF3-8146FDB9550F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iBand.Models</RootNamespace>
+    <AssemblyName>iBand.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\TFSWorkSpace\PayitGlobalDistributedAPI\GlobalPayitAPIv6\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonInputParams.cs" />
+    <Compile Include="DTO.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="Inputs\AlbumsForCategory.cs" />
+    <Compile Include="Inputs\ChattingShows.cs" />
+    <Compile Include="Inputs\CountriesAndOperators.cs" />
+    <Compile Include="Inputs\dobInputs\CreateSubscription.cs" />
+    <Compile Include="Inputs\dobInputs\DeleteSubscription.cs" />
+    <Compile Include="Inputs\dobInputs\PIN.cs" />
+    <Compile Include="Inputs\GetContestantsForShow.cs" />
+    <Compile Include="Inputs\GetFavourites.cs" />
+    <Compile Include="Inputs\OneInInputs\Address.cs" />
+    <Compile Include="Inputs\OneInInputs\ForgotPassword.cs" />
+    <Compile Include="Inputs\OneInInputs\GetAddress.cs" />
+    <Compile Include="Inputs\OneInInputs\Login.cs" />
+    <Compile Include="Inputs\OneInInputs\ModifyUserDetails.cs" />
+    <Compile Include="Inputs\OneInInputs\RegisterUser.cs" />
+    <Compile Include="Inputs\OneInInputs\SaveAddress.cs" />
+    <Compile Include="Inputs\OneInInputs\Verify.cs" />
+    <Compile Include="Inputs\RBTAlbumsForArtists.cs" />
+    <Compile Include="Inputs\RBTArtists.cs" />
+    <Compile Include="Inputs\RBTCategories.cs" />
+    <Compile Include="Inputs\RBTsForAlbums.cs" />
+    <Compile Include="Inputs\RecentRBTs.cs" />
+    <Compile Include="Inputs\RecentServices.cs" />
+    <Compile Include="Inputs\ServiceCategories.cs" />
+    <Compile Include="Inputs\Services.cs" />
+    <Compile Include="Inputs\SetFavourite.cs" />
+    <Compile Include="Inputs\Subscription\PaymentChannel.cs" />
+    <Compile Include="Inputs\Subscription\ChannelContentData.cs" />
+    <Compile Include="Inputs\Subscription\ChannelsForService.cs" />
+    <Compile Include="Inputs\Subscription\ContentView.cs" />
+    <Compile Include="Inputs\Subscription\Contentviewbyservice.cs" />
+    <Compile Include="Inputs\Subscription\Country.cs" />
+    <Compile Include="Inputs\Subscription\InteractiveServiceContestantVote.cs" />
+    <Compile Include="Inputs\Subscription\Interactiveserviceusermsg.cs" />
+    <Compile Include="Inputs\Subscription\ServiceByCategory.cs" />
+    <Compile Include="Inputs\Subscription\ServicesByCountry.cs" />
+    <Compile Include="Inputs\Subscription\SubsUsersubscribechannel.cs" />
+    <Compile Include="Inputs\Subscription\UnSubscribeUserChannel.cs" />
+    <Compile Include="Inputs\Subscription\SubscribeUserChannel.cs" />
+    <Compile Include="Inputs\Subscription\SubscriptionServices.cs" />
+    <Compile Include="Inputs\Subscription\UserSubcribeChannelDetails.cs" />
+    <Compile Include="Inputs\Subscription\UserSubscribeChannel.cs" />
+    <Compile Include="Inputs\VotingShows.cs" />
+    <Compile Include="Inputs\WalletInputs\CreditTransactions.cs" />
+    <Compile Include="Inputs\WalletInputs\DebitTransactions.cs" />
+    <Compile Include="Inputs\WalletInputs\ForgotPassword.cs" />
+    <Compile Include="Inputs\WalletInputs\GetProfileInfo.cs" />
+    <Compile Include="Inputs\WalletInputs\ModifyUser.cs" />
+    <Compile Include="Inputs\WalletInputs\Orders.cs" />
+    <Compile Include="Inputs\WalletInputs\PayItemRequest.cs" />
+    <Compile Include="Inputs\WalletInputs\QROrderItem.cs" />
+    <Compile Include="Inputs\WalletInputs\QROrderRequest.cs" />
+    <Compile Include="Inputs\WalletInputs\QRRequest.cs" />
+    <Compile Include="Inputs\WalletInputs\SaveKYC.cs" />
+    <Compile Include="Inputs\WalletInputs\TransactionHistory.cs" />
+    <Compile Include="Inputs\WalletInputs\VerifyUser.cs" />
+    <Compile Include="Inputs\WalletInputs\WalletAccounts.cs" />
+    <Compile Include="Inputs\WalletInputs\WalletLogin.cs" />
+    <Compile Include="Inputs\WalletInputs\WalletProfile.cs" />
+    <Compile Include="OneInCommonInputParams.cs" />
+    <Compile Include="OneinInput.cs" />
+    <Compile Include="Outputs\album.cs" />
+    <Compile Include="Outputs\AlbumsForCategory.cs" />
+    <Compile Include="Outputs\artist.cs" />
+    <Compile Include="Outputs\category.cs" />
+    <Compile Include="Outputs\ChattingShowsDTO.cs" />
+    <Compile Include="Outputs\company.cs" />
+    <Compile Include="Outputs\contestant.cs" />
+    <Compile Include="Outputs\CountriesAndOperators.cs" />
+    <Compile Include="Outputs\Country.cs" />
+    <Compile Include="Outputs\dobOutputs\CreateDTO.cs" />
+    <Compile Include="Outputs\dobOutputs\DeleteSubscriptionDTO.cs" />
+    <Compile Include="Outputs\dobOutputs\PINDTO.cs" />
+    <Compile Include="Outputs\GetContestantsForShowDTO.cs" />
+    <Compile Include="Outputs\GetFavouritesDTO.cs" />
+    <Compile Include="Outputs\OneInOutputs\AddressDTO.cs" />
+    <Compile Include="Outputs\OneInOutputs\ForgotPassword.cs" />
+    <Compile Include="Outputs\OneInOutputs\GetAddressDTO.cs" />
+    <Compile Include="Outputs\OneInOutputs\KYCParameters.cs" />
+    <Compile Include="Outputs\OneInOutputs\Login.cs" />
+    <Compile Include="Outputs\OneInOutputs\ModifyUserDetails.cs" />
+    <Compile Include="Outputs\OneInOutputs\RegisterUser.cs" />
+    <Compile Include="Outputs\OneInOutputs\SaveAddressDTO.cs" />
+    <Compile Include="Outputs\OneInOutputs\Verify.cs" />
+    <Compile Include="Outputs\Operator.cs" />
+    <Compile Include="Outputs\RBT.cs" />
+    <Compile Include="Outputs\RBTAlbumsForArtists.cs" />
+    <Compile Include="Outputs\RBTArtists.cs" />
+    <Compile Include="Outputs\RBTCategories.cs" />
+    <Compile Include="Outputs\RBTsForAlbums.cs" />
+    <Compile Include="Outputs\RecentRBTs.cs" />
+    <Compile Include="Outputs\RecentServicesDTO.cs" />
+    <Compile Include="Outputs\service.cs" />
+    <Compile Include="Outputs\ServiceCategoriesDTO.cs" />
+    <Compile Include="Outputs\ServicesDTO.cs" />
+    <Compile Include="Outputs\SetFavouriteDTO.cs" />
+    <Compile Include="Outputs\Subscription\Category.cs" />
+    <Compile Include="Outputs\Subscription\channels.cs" />
+    <Compile Include="Outputs\Subscription\ChannelsForServiceDTO.cs" />
+    <Compile Include="Outputs\Subscription\contentdata.cs" />
+    <Compile Include="Outputs\Subscription\ContentView.cs" />
+    <Compile Include="Outputs\Subscription\ContentViewDTO.cs" />
+    <Compile Include="Outputs\Subscription\InteractiveserviceusermsgDTO.cs" />
+    <Compile Include="Outputs\Subscription\InteractiveservicevoteDTO.cs" />
+    <Compile Include="Outputs\Subscription\PaymentChannelDTO.cs" />
+    <Compile Include="Outputs\Subscription\service.cs" />
+    <Compile Include="Outputs\Subscription\ServicebyCategoryDTO.cs" />
+    <Compile Include="Outputs\Subscription\ServiceChannel.cs" />
+    <Compile Include="Outputs\Subscription\ServicesByCountryDTO.cs" />
+    <Compile Include="Outputs\Subscription\SubscribeUserChannelDTO.cs" />
+    <Compile Include="Outputs\Subscription\SubscriptionServiceDTO.cs" />
+    <Compile Include="Outputs\Subscription\SubsGetCategoriesDTO.cs" />
+    <Compile Include="Outputs\Subscription\SubusersubcribechannelDTO.cs" />
+    <Compile Include="Outputs\Subscription\UnSubscribeUserChannelDTO.cs" />
+    <Compile Include="Outputs\Subscription\UserChannelContentDataDTO.cs" />
+    <Compile Include="Outputs\Subscription\UserSubscribeChannelDTO.cs" />
+    <Compile Include="Outputs\tone.cs" />
+    <Compile Include="Outputs\tvshow.cs" />
+    <Compile Include="Outputs\VotingShowsDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\CreditTransactionsDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\DebitTransactionsDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\ForgotPasswordDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\GetProfileInfoDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\KYCParametersDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\MerchantDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\ModifyUserDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\OrdersDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\PayItemResponseDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\QROrderResponseDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\SaveKYCDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\TransactionDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\TransactionHistoryDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\VerifyUserDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\WalletAccountsDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\WalletDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\WalletLoginDTO.cs" />
+    <Compile Include="Outputs\WalletOutputs\WalletProfileDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecureHash.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Translations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

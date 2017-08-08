@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eb202724ede1419ea1a3ae02a61b424c" Name="Diagram1">
+        <EntityTypeShape EntityType="iBandModel.Album" Width="1.5" PointX="6.75" PointY="58.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Artist" Width="1.5" PointX="6.75" PointY="62.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.BillingPayment" Width="1.5" PointX="3" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.BillingPaymentsConfiguration" Width="1.5" PointX="5.25" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Category" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Company" Width="1.5" PointX="6.75" PointY="65.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Contestant" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.ContestantsReports_Day" Width="1.5" PointX="5.25" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.ContestantsReports_Hour" Width="1.5" PointX="8.25" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.ContestantsReports_Month" Width="1.5" PointX="5.25" PointY="48.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.ContestantsReports_Year" Width="1.5" PointX="8.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Country" Width="1.5" PointX="0.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.InteractiveServiceConfig" Width="1.5" PointX="8.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.InteractiveServiceContestant" Width="1.5" PointX="11.25" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.InteractiveServiceContestantsVote" Width="1.5" PointX="13.5" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.InteractiveService" Width="1.5" PointX="6" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.InteractiveServiceUserMessage" Width="1.5" PointX="11.25" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.MetaMaster" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Operator" Width="1.5" PointX="3" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.RBT" Width="1.5" PointX="11.25" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.RBTMeta" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Service" Width="1.5" PointX="3" PointY="54.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.ServicesConfig" Width="1.5" PointX="5.25" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.SubCategory" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_Billing" Width="1.5" PointX="8.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_BillingHistory" Width="1.5" PointX="11.25" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ContentData" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ContentDelivery" Width="1.5" PointX="3" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ContentGroupConfig" Width="1.5" PointX="7.5" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ContentGroups" Width="1.5" PointX="3" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ContentOwners" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ServiceChannelContentConfig" Width="1.5" PointX="5.25" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ServiceChannelContentForCountry" Width="1.5" PointX="3" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_ServiceChannels" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_Services" Width="1.5" PointX="1.5" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_UserServiceChannels" Width="1.5" PointX="6" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Subs_UserSubscriptions" Width="1.5" PointX="9" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Tbl_Action_Privileges" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Tbl_Menu_Master" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.TBL_Roles_Previleges" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Tbl_User_Master" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.TempTone" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Tone" Width="1.5" PointX="9" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Translation" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.TVChannel" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.UserFavourite" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.UserOperator" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.User" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.UserWallet" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="iBandModel.Tbl_Role_Master" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="iBandModel.FK_Albums_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Tones_Albums" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Tones_Artists" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_BillingPaymentsConfigurations_BillingPayments" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_BillingPaymentsConfigurations_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_BillingPaymentsConfigurations_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ServicesConfig_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentData_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentGroupConfig_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_GroupConfigsForCountry_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Tones_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Tones_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Day_InteractiveServiceContestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Day_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Day_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Hour_InteractiveServiceContestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Hour_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Hour_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Month_InteractiveServiceContestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Month_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Month_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Year_InteractiveServiceContestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Year_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ContestantReports_Year_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceConfig_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Operators_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_Billing_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_BillingHistory_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentDelivery_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ServiceChannelCountry_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserServiceChannels_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserSubscriptions_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceConfig_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceConfig_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestants_Contestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestants_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestants_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestantsVotes_InteractiveServiceContestants" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestantsVotes_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceContestantsVotes_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceUserMessage_InteractiveServices" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_InteractiveServiceUserMessage_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_RBTMeta_MetaMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_TempTone_MetaMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_RBT_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ServicesConfig_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_Billing_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_BillingHistory_Operators" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_RBT_Tones" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_ServicesConfig_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentData_SubCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentGroupConfig_SubCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_GroupConfigsForCountry_SubCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_Billing_Subs_ServiceChannels" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_Billing_Subs_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_BillingHistory_Subs_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentData_Subs_ContentOwners" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentGroupConfig_Subs_ContentData" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentDelivery_Subs_ServiceChannels" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentDelivery_Subs_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentGroupConfig_Subs_ContentGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ContentGroupConfig_Subs_ContentOwners" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ServiceChannelContentConfig_Subs_ContentGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_GroupConfigsForCountry_Subs_ContentOwners" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_GroupConfigsForCountry_Subs_ServiceChannelGroupsForCountry" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ServiceChannelCountry_Subs_ServiceChannels" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_ServiceChannels_Subs_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserServiceChannels_Subs_ServiceChannels" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserSubscriptions_Subs_ServiceChannels" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserServices_Subs_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="iBandModel.FK_Subs_UserSubscriptions_Subs_Services" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WalletsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KYCParameters">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KYCAlias" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+          <Property Name="isFirstNameRequired" Type="bit" Nullable="false" />
+          <Property Name="isLastNameRequired" Type="bit" Nullable="false" />
+          <Property Name="isFullNameRequired" Type="bit" Nullable="false" />
+          <Property Name="DOB" Type="smalldatetime" />
+          <Property Name="isDOBRequired" Type="bit" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+          <Property Name="isGenderRequired" Type="bit" Nullable="false" />
+          <Property Name="Nationality" Type="varchar" MaxLength="5" />
+          <Property Name="isNationalityRequired" Type="bit" Nullable="false" />
+          <Property Name="PlaceOfBirth" Type="varchar" MaxLength="5" />
+          <Property Name="isPlaceOfBirthRequired" Type="bit" Nullable="false" />
+          <Property Name="IDProofNo1Label" Type="nvarchar" MaxLength="100" />
+          <Property Name="isIDProof1Required" Type="bit" Nullable="false" />
+          <Property Name="isProof1DoublePaged" Type="bit" Nullable="false" />
+          <Property Name="IDProofNo2Label" Type="nvarchar" MaxLength="100" />
+          <Property Name="isIDProof2Required" Type="bit" Nullable="false" />
+          <Property Name="isProof2DoublePaged" Type="bit" Nullable="false" />
+          <Property Name="IDProofNo3Label" Type="nvarchar" MaxLength="100" />
+          <Property Name="isIDProof3Required" Type="bit" Nullable="false" />
+          <Property Name="isProof3DoublePaged" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info3" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="KYCParametersCountries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Country" Type="varchar" MaxLength="5" />
+          <Property Name="KYCParametersID" Type="int" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="KYCRatingRules">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RuleType" Type="int" />
+          <Property Name="ConfigID" Type="int" />
+          <Property Name="LimitType" Type="int" />
+          <Property Name="LimitValue" Type="int" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="Info1" Type="varchar" MaxLength="50" />
+          <Property Name="Info2" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="Configuration" Type="varchar" MaxLength="100" />
+          <Property Name="KYCRating" Type="int" />
+        </EntityType>
+        <EntityType Name="KYCRatingValidations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ValidationType" Type="int" />
+          <Property Name="ConfigID" Type="int" />
+          <Property Name="MinAmt" Type="float" />
+          <Property Name="MaxAmt" Type="float" />
+          <Property Name="Info1" Type="varchar" MaxLength="50" />
+          <Property Name="Info2" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="UpdatedOn" Type="datetime" />
+          <Property Name="UpdateBy" Type="int" />
+          <Property Name="Configuration" Type="varchar" MaxLength="100" />
+          <Property Name="KYCRating" Type="int" />
+        </EntityType>
+        <EntityType Name="Profiles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserIdentifier" Type="bigint" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="200" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="smalldatetime" />
+          <Property Name="isMobileVerified" Type="bit" />
+          <Property Name="isEmailVerified" Type="bit" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="5" />
+          <Property Name="KYCRating" Type="int" />
+        </EntityType>
+        <EntityType Name="ProfilesKYC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfileID" Type="bigint" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="smalldatetime" />
+          <Property Name="Gender" Type="varchar" MaxLength="5" />
+          <Property Name="Nationality" Type="varchar" MaxLength="5" />
+          <Property Name="PlaceOfBirth" Type="varchar" MaxLength="50" />
+          <Property Name="IDProof1No" Type="varchar" MaxLength="50" />
+          <Property Name="IDProof1ImageURL" Type="varchar" MaxLength="200" />
+          <Property Name="IDProof1ImageURL2" Type="varchar" MaxLength="200" />
+          <Property Name="IDProof2No" Type="varchar" MaxLength="50" />
+          <Property Name="IDProof2ImageURL" Type="varchar" MaxLength="200" />
+          <Property Name="IDProof2ImageURL2" Type="varchar" MaxLength="200" />
+          <Property Name="IDProof3No" Type="varchar" MaxLength="50" />
+          <Property Name="IDProof3ImageURL" Type="varchar" MaxLength="200" />
+          <Property Name="IDProof3ImageURL2" Type="varchar" MaxLength="200" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+          <Property Name="KYCRating" Type="int" />
+        </EntityType>
+        <EntityType Name="ProfilesKYCHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfileKYCID" Type="bigint" />
+          <Property Name="ProfileID" Type="bigint" />
+          <Property Name="Action" Type="varchar" MaxLength="50" />
+          <Property Name="ActionDescription" Type="varchar" MaxLength="50" />
+          <Property Name="ActionStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="KYCRating" Type="int" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SanctionsList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+          <Property Name="DOBDate" Type="int" />
+          <Property Name="DOBMonth" Type="int" />
+          <Property Name="DOBYear" Type="int" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="5" />
+          <Property Name="PassportNo" Type="varchar" MaxLength="50" />
+          <Property Name="NationalIdentityNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="20" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="varchar" MaxLength="50" />
+          <Property Name="Info2" Type="varchar" MaxLength="50" />
+          <Property Name="Info3" Type="varchar" MaxLength="50" />
+          <Property Name="Info4" Type="varchar" MaxLength="50" />
+          <Property Name="Source" Type="varchar" MaxLength="50" />
+          <Property Name="SourceDocInformation" Type="varchar" MaxLength="50" />
+          <Property Name="SourceID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Wallet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfleID" Type="bigint" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="WalletAccounts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WalletID" Type="bigint" />
+          <Property Name="WalletTypeID" Type="int" />
+          <Property Name="UserIdentifier" Type="bigint" />
+          <Property Name="UseCustomerLogin" Type="bit" />
+          <Property Name="SMSAuthenticatedTransaction" Type="bit" />
+          <Property Name="CVVAuthentcatedTransaction" Type="varchar" MaxLength="5" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="5" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info4" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="16" />
+          <Property Name="WalletTypeCountryID" Type="int" />
+        </EntityType>
+        <EntityType Name="WalletTransactions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WalletAccountID" Type="bigint" />
+          <Property Name="ProfileID" Type="bigint" />
+          <Property Name="WalletTypeID" Type="int" />
+          <Property Name="UserIdentifier" Type="bigint" />
+          <Property Name="TransactionType" Type="nvarchar" MaxLength="10" />
+          <Property Name="TransactionRef" Type="nvarchar" MaxLength="20" />
+          <Property Name="UserMobile" Type="varchar" MaxLength="20" />
+          <Property Name="UserEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransactionDate" Type="smalldatetime" />
+          <Property Name="PaymentService" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentReference" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentAccountType" Type="nvarchar" MaxLength="30" />
+          <Property Name="PaymentStatusDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="TransactionAmount" Type="float" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="5" />
+          <Property Name="TransactionCurrency" Type="nvarchar" MaxLength="5" />
+          <Property Name="TransactionStatus" Type="nvarchar" MaxLength="25" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="WalletTypeCountries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WalletTypeID" Type="int" />
+          <Property Name="WalletName" Type="nvarchar" MaxLength="50" />
+          <Property Name="WalletCode" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="5" />
+          <Property Name="isDefault" Type="bit" Nullable="false" />
+          <Property Name="KYCParameterID" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WalletTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WalletTypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UseCustomerLogin" Type="bit" Nullable="false" />
+          <Property Name="SMSAuthenticatedTransaction" Type="bit" Nullable="false" />
+          <Property Name="CVVAuthentcatedTransaction" Type="varchar" MaxLength="5" />
+          <Property Name="Image1" Type="varchar" MaxLength="200" />
+          <Property Name="Image2" Type="varchar" MaxLength="200" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="smalldatetime" />
+          <Property Name="Info1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Info2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_KYCParametersCountries_KYCParameters">
+          <End Role="KYCParameters" Type="Self.KYCParameters" Multiplicity="0..1" />
+          <End Role="KYCParametersCountries" Type="Self.KYCParametersCountries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYCParameters">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KYCParametersCountries">
+              <PropertyRef Name="KYCParametersID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYC_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="0..1" />
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYC">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYCHistory_ProfilesKYC">
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="0..1" />
+          <End Role="ProfilesKYCHistory" Type="Self.ProfilesKYCHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProfilesKYC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYCHistory">
+              <PropertyRef Name="ProfileKYCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYCHistory_ProfilesKYC1">
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="0..1" />
+          <End Role="ProfilesKYCHistory" Type="Self.ProfilesKYCHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProfilesKYC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYCHistory">
+              <PropertyRef Name="ProfileKYCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wallet_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="0..1" />
+          <End Role="Wallet" Type="Self.Wallet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Wallet">
+              <PropertyRef Name="ProfleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_Wallet">
+          <End Role="Wallet" Type="Self.Wallet" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wallet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_WalletTypeCountries">
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountries" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypeCountries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletTypeCountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletTypes" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_Profiles">
+          <End Role="Profiles" Type="Self.Profiles" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_WalletAccounts">
+          <End Role="WalletAccounts" Type="Self.WalletAccounts" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletAccounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="WalletAccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletTypes" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTypeCountries_KYCParameters">
+          <End Role="KYCParameters" Type="Self.KYCParameters" Multiplicity="0..1" />
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYCParameters">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTypeCountries">
+              <PropertyRef Name="KYCParameterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTypeCountries_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletTypes" Multiplicity="0..1" />
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTypeCountries">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetProfileswithKYC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="WalletsModelStoreContainer">
+          <EntitySet Name="KYCParameters" EntityType="Self.KYCParameters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KYCParametersCountries" EntityType="Self.KYCParametersCountries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KYCRatingRules" EntityType="Self.KYCRatingRules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KYCRatingValidations" EntityType="Self.KYCRatingValidations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Profiles" EntityType="Self.Profiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProfilesKYC" EntityType="Self.ProfilesKYC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProfilesKYCHistory" EntityType="Self.ProfilesKYCHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanctionsList" EntityType="Self.SanctionsList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wallet" EntityType="Self.Wallet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WalletAccounts" EntityType="Self.WalletAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WalletTransactions" EntityType="Self.WalletTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WalletTypeCountries" EntityType="Self.WalletTypeCountries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WalletTypes" EntityType="Self.WalletTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_KYCParametersCountries_KYCParameters" Association="Self.FK_KYCParametersCountries_KYCParameters">
+            <End Role="KYCParameters" EntitySet="KYCParameters" />
+            <End Role="KYCParametersCountries" EntitySet="KYCParametersCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYC_Profiles" Association="Self.FK_ProfilesKYC_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYCHistory_ProfilesKYC" Association="Self.FK_ProfilesKYCHistory_ProfilesKYC">
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYC" />
+            <End Role="ProfilesKYCHistory" EntitySet="ProfilesKYCHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYCHistory_ProfilesKYC1" Association="Self.FK_ProfilesKYCHistory_ProfilesKYC1">
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYC" />
+            <End Role="ProfilesKYCHistory" EntitySet="ProfilesKYCHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wallet_Profiles" Association="Self.FK_Wallet_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Wallet" EntitySet="Wallet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_Wallet" Association="Self.FK_WalletAccounts_Wallet">
+            <End Role="Wallet" EntitySet="Wallet" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_WalletTypeCountries" Association="Self.FK_WalletAccounts_WalletTypeCountries">
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_WalletTypes" Association="Self.FK_WalletAccounts_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_Profiles" Association="Self.FK_WalletTransactions_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_WalletAccounts" Association="Self.FK_WalletTransactions_WalletAccounts">
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_WalletTypes" Association="Self.FK_WalletTransactions_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTypeCountries_KYCParameters" Association="Self.FK_WalletTypeCountries_KYCParameters">
+            <End Role="KYCParameters" EntitySet="KYCParameters" />
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTypeCountries_WalletTypes" Association="Self.FK_WalletTypeCountries_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WalletsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KYCParameter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KYCAlias" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isFirstNameRequired" Type="Boolean" Nullable="false" />
+          <Property Name="isLastNameRequired" Type="Boolean" Nullable="false" />
+          <Property Name="isFullNameRequired" Type="Boolean" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="isDOBRequired" Type="Boolean" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="isGenderRequired" Type="Boolean" Nullable="false" />
+          <Property Name="Nationality" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="isNationalityRequired" Type="Boolean" Nullable="false" />
+          <Property Name="PlaceOfBirth" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="isPlaceOfBirthRequired" Type="Boolean" Nullable="false" />
+          <Property Name="IDProofNo1Label" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isIDProof1Required" Type="Boolean" Nullable="false" />
+          <Property Name="isProof1DoublePaged" Type="Boolean" Nullable="false" />
+          <Property Name="IDProofNo2Label" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isIDProof2Required" Type="Boolean" Nullable="false" />
+          <Property Name="isProof2DoublePaged" Type="Boolean" Nullable="false" />
+          <Property Name="IDProofNo3Label" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="isIDProof3Required" Type="Boolean" Nullable="false" />
+          <Property Name="isProof3DoublePaged" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="KYCParametersCountries" Relationship="Self.FK_KYCParametersCountries_KYCParameters" FromRole="KYCParameters" ToRole="KYCParametersCountries" />
+          <NavigationProperty Name="WalletTypeCountries" Relationship="Self.FK_WalletTypeCountries_KYCParameters" FromRole="KYCParameters" ToRole="WalletTypeCountries" />
+        </EntityType>
+        <EntityType Name="KYCParametersCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Country" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="KYCParametersID" Type="Int32" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="KYCParameter" Relationship="Self.FK_KYCParametersCountries_KYCParameters" FromRole="KYCParametersCountries" ToRole="KYCParameters" />
+        </EntityType>
+        <EntityType Name="KYCRatingRule">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RuleType" Type="Int32" />
+          <Property Name="ConfigID" Type="Int32" />
+          <Property Name="LimitType" Type="Int32" />
+          <Property Name="LimitValue" Type="Int32" />
+          <Property Name="Duration" Type="Int32" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="Configuration" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KYCRating" Type="Int32" />
+        </EntityType>
+        <EntityType Name="KYCRatingValidation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ValidationType" Type="Int32" />
+          <Property Name="ConfigID" Type="Int32" />
+          <Property Name="MinAmt" Type="Double" />
+          <Property Name="MaxAmt" Type="Double" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+          <Property Name="UpdateBy" Type="Int32" />
+          <Property Name="Configuration" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="KYCRating" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Profile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserIdentifier" Type="Int64" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="isMobileVerified" Type="Boolean" />
+          <Property Name="isEmailVerified" Type="Boolean" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="KYCRating" Type="Int32" />
+          <NavigationProperty Name="ProfilesKYCs" Relationship="Self.FK_ProfilesKYC_Profiles" FromRole="Profiles" ToRole="ProfilesKYC" />
+          <NavigationProperty Name="Wallets" Relationship="Self.FK_Wallet_Profiles" FromRole="Profiles" ToRole="Wallet" />
+          <NavigationProperty Name="WalletTransactions" Relationship="Self.FK_WalletTransactions_Profiles" FromRole="Profiles" ToRole="WalletTransactions" />
+        </EntityType>
+        <EntityType Name="ProfilesKYC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileID" Type="Int64" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Nationality" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof1No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof1ImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof1ImageURL2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof2No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof2ImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof2ImageURL2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof3No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof3ImageURL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDProof3ImageURL2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KYCRating" Type="Int32" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_ProfilesKYC_Profiles" FromRole="ProfilesKYC" ToRole="Profiles" />
+          <NavigationProperty Name="ProfilesKYCHistories" Relationship="Self.FK_ProfilesKYCHistory_ProfilesKYC" FromRole="ProfilesKYC" ToRole="ProfilesKYCHistory" />
+          <NavigationProperty Name="ProfilesKYCHistories1" Relationship="Self.FK_ProfilesKYCHistory_ProfilesKYC1" FromRole="ProfilesKYC" ToRole="ProfilesKYCHistory" />
+        </EntityType>
+        <EntityType Name="ProfilesKYCHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileKYCID" Type="Int64" />
+          <Property Name="ProfileID" Type="Int64" />
+          <Property Name="Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ActionDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ActionStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="KYCRating" Type="Int32" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ProfilesKYC" Relationship="Self.FK_ProfilesKYCHistory_ProfilesKYC" FromRole="ProfilesKYCHistory" ToRole="ProfilesKYC" />
+          <NavigationProperty Name="ProfilesKYC1" Relationship="Self.FK_ProfilesKYCHistory_ProfilesKYC1" FromRole="ProfilesKYCHistory" ToRole="ProfilesKYC" />
+        </EntityType>
+        <EntityType Name="SanctionsList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DOBDate" Type="Int32" />
+          <Property Name="DOBMonth" Type="Int32" />
+          <Property Name="DOBYear" Type="Int32" />
+          <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="PassportNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NationalIdentityNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Info3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Info4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Source" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SourceDocInformation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SourceID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Wallet">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfleID" Type="Int64" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_Wallet_Profiles" FromRole="Wallet" ToRole="Profiles" />
+          <NavigationProperty Name="WalletAccounts" Relationship="Self.FK_WalletAccounts_Wallet" FromRole="Wallet" ToRole="WalletAccounts" />
+        </EntityType>
+        <EntityType Name="WalletAccount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WalletID" Type="Int64" />
+          <Property Name="WalletTypeID" Type="Int32" />
+          <Property Name="UserIdentifier" Type="Int64" />
+          <Property Name="UseCustomerLogin" Type="Boolean" />
+          <Property Name="SMSAuthenticatedTransaction" Type="Boolean" />
+          <Property Name="CVVAuthentcatedTransaction" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="Currency" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="WalletTypeCountryID" Type="Int32" />
+          <NavigationProperty Name="Wallet" Relationship="Self.FK_WalletAccounts_Wallet" FromRole="WalletAccounts" ToRole="Wallet" />
+          <NavigationProperty Name="WalletTypeCountry" Relationship="Self.FK_WalletAccounts_WalletTypeCountries" FromRole="WalletAccounts" ToRole="WalletTypeCountries" />
+          <NavigationProperty Name="WalletType" Relationship="Self.FK_WalletAccounts_WalletTypes" FromRole="WalletAccounts" ToRole="WalletTypes" />
+          <NavigationProperty Name="WalletTransactions" Relationship="Self.FK_WalletTransactions_WalletAccounts" FromRole="WalletAccounts" ToRole="WalletTransactions" />
+        </EntityType>
+        <EntityType Name="WalletTransaction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WalletAccountID" Type="Int64" />
+          <Property Name="ProfileID" Type="Int64" />
+          <Property Name="WalletTypeID" Type="Int32" />
+          <Property Name="UserIdentifier" Type="Int64" />
+          <Property Name="TransactionType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionRef" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UserMobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionDate" Type="DateTime" Precision="0" />
+          <Property Name="PaymentService" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentReference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentAccountType" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentStatusDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="TransactionAmount" Type="Double" />
+          <Property Name="Currency" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionCurrency" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionStatus" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Profile" Relationship="Self.FK_WalletTransactions_Profiles" FromRole="WalletTransactions" ToRole="Profiles" />
+          <NavigationProperty Name="WalletAccount" Relationship="Self.FK_WalletTransactions_WalletAccounts" FromRole="WalletTransactions" ToRole="WalletAccounts" />
+          <NavigationProperty Name="WalletType" Relationship="Self.FK_WalletTransactions_WalletTypes" FromRole="WalletTransactions" ToRole="WalletTypes" />
+        </EntityType>
+        <EntityType Name="WalletTypeCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WalletTypeID" Type="Int32" />
+          <Property Name="WalletName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WalletCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="isDefault" Type="Boolean" Nullable="false" />
+          <Property Name="KYCParameterID" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="KYCParameter" Relationship="Self.FK_WalletTypeCountries_KYCParameters" FromRole="WalletTypeCountries" ToRole="KYCParameters" />
+          <NavigationProperty Name="WalletAccounts" Relationship="Self.FK_WalletAccounts_WalletTypeCountries" FromRole="WalletTypeCountries" ToRole="WalletAccounts" />
+          <NavigationProperty Name="WalletType" Relationship="Self.FK_WalletTypeCountries_WalletTypes" FromRole="WalletTypeCountries" ToRole="WalletTypes" />
+        </EntityType>
+        <EntityType Name="WalletType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WalletTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UseCustomerLogin" Type="Boolean" Nullable="false" />
+          <Property Name="SMSAuthenticatedTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="CVVAuthentcatedTransaction" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="Info1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Info2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WalletAccounts" Relationship="Self.FK_WalletAccounts_WalletTypes" FromRole="WalletTypes" ToRole="WalletAccounts" />
+          <NavigationProperty Name="WalletTransactions" Relationship="Self.FK_WalletTransactions_WalletTypes" FromRole="WalletTypes" ToRole="WalletTransactions" />
+          <NavigationProperty Name="WalletTypeCountries" Relationship="Self.FK_WalletTypeCountries_WalletTypes" FromRole="WalletTypes" ToRole="WalletTypeCountries" />
+        </EntityType>
+        <Association Name="FK_KYCParametersCountries_KYCParameters">
+          <End Role="KYCParameters" Type="Self.KYCParameter" Multiplicity="0..1" />
+          <End Role="KYCParametersCountries" Type="Self.KYCParametersCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYCParameters">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="KYCParametersCountries">
+              <PropertyRef Name="KYCParametersID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTypeCountries_KYCParameters">
+          <End Role="KYCParameters" Type="Self.KYCParameter" Multiplicity="0..1" />
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KYCParameters">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTypeCountries">
+              <PropertyRef Name="KYCParameterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYC_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYC">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Wallet_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="Wallet" Type="Self.Wallet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Wallet">
+              <PropertyRef Name="ProfleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_Profiles">
+          <End Role="Profiles" Type="Self.Profile" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Profiles">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="ProfileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYCHistory_ProfilesKYC">
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="0..1" />
+          <End Role="ProfilesKYCHistory" Type="Self.ProfilesKYCHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProfilesKYC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYCHistory">
+              <PropertyRef Name="ProfileKYCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProfilesKYCHistory_ProfilesKYC1">
+          <End Role="ProfilesKYC" Type="Self.ProfilesKYC" Multiplicity="0..1" />
+          <End Role="ProfilesKYCHistory" Type="Self.ProfilesKYCHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProfilesKYC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProfilesKYCHistory">
+              <PropertyRef Name="ProfileKYCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_Wallet">
+          <End Role="Wallet" Type="Self.Wallet" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Wallet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_WalletTypeCountries">
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountry" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypeCountries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletTypeCountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletAccounts_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletType" Multiplicity="0..1" />
+          <End Role="WalletAccounts" Type="Self.WalletAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletAccounts">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_WalletAccounts">
+          <End Role="WalletAccounts" Type="Self.WalletAccount" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletAccounts">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="WalletAccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTransactions_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletType" Multiplicity="0..1" />
+          <End Role="WalletTransactions" Type="Self.WalletTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTransactions">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WalletTypeCountries_WalletTypes">
+          <End Role="WalletTypes" Type="Self.WalletType" Multiplicity="0..1" />
+          <End Role="WalletTypeCountries" Type="Self.WalletTypeCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WalletTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="WalletTypeCountries">
+              <PropertyRef Name="WalletTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WalletsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KYCParameters" EntityType="Self.KYCParameter" />
+          <EntitySet Name="KYCParametersCountries" EntityType="Self.KYCParametersCountry" />
+          <EntitySet Name="KYCRatingRules" EntityType="Self.KYCRatingRule" />
+          <EntitySet Name="KYCRatingValidations" EntityType="Self.KYCRatingValidation" />
+          <EntitySet Name="Profiles" EntityType="Self.Profile" />
+          <EntitySet Name="ProfilesKYCs" EntityType="Self.ProfilesKYC" />
+          <EntitySet Name="ProfilesKYCHistories" EntityType="Self.ProfilesKYCHistory" />
+          <EntitySet Name="SanctionsLists" EntityType="Self.SanctionsList" />
+          <EntitySet Name="Wallets" EntityType="Self.Wallet" />
+          <EntitySet Name="WalletAccounts" EntityType="Self.WalletAccount" />
+          <EntitySet Name="WalletTransactions" EntityType="Self.WalletTransaction" />
+          <EntitySet Name="WalletTypeCountries" EntityType="Self.WalletTypeCountry" />
+          <EntitySet Name="WalletTypes" EntityType="Self.WalletType" />
+          <AssociationSet Name="FK_KYCParametersCountries_KYCParameters" Association="Self.FK_KYCParametersCountries_KYCParameters">
+            <End Role="KYCParameters" EntitySet="KYCParameters" />
+            <End Role="KYCParametersCountries" EntitySet="KYCParametersCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTypeCountries_KYCParameters" Association="Self.FK_WalletTypeCountries_KYCParameters">
+            <End Role="KYCParameters" EntitySet="KYCParameters" />
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYC_Profiles" Association="Self.FK_ProfilesKYC_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYCs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Wallet_Profiles" Association="Self.FK_Wallet_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="Wallet" EntitySet="Wallets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_Profiles" Association="Self.FK_WalletTransactions_Profiles">
+            <End Role="Profiles" EntitySet="Profiles" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYCHistory_ProfilesKYC" Association="Self.FK_ProfilesKYCHistory_ProfilesKYC">
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYCs" />
+            <End Role="ProfilesKYCHistory" EntitySet="ProfilesKYCHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProfilesKYCHistory_ProfilesKYC1" Association="Self.FK_ProfilesKYCHistory_ProfilesKYC1">
+            <End Role="ProfilesKYC" EntitySet="ProfilesKYCs" />
+            <End Role="ProfilesKYCHistory" EntitySet="ProfilesKYCHistories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_Wallet" Association="Self.FK_WalletAccounts_Wallet">
+            <End Role="Wallet" EntitySet="Wallets" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_WalletTypeCountries" Association="Self.FK_WalletAccounts_WalletTypeCountries">
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletAccounts_WalletTypes" Association="Self.FK_WalletAccounts_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_WalletAccounts" Association="Self.FK_WalletTransactions_WalletAccounts">
+            <End Role="WalletAccounts" EntitySet="WalletAccounts" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTransactions_WalletTypes" Association="Self.FK_WalletTransactions_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletTransactions" EntitySet="WalletTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WalletTypeCountries_WalletTypes" Association="Self.FK_WalletTypeCountries_WalletTypes">
+            <End Role="WalletTypes" EntitySet="WalletTypes" />
+            <End Role="WalletTypeCountries" EntitySet="WalletTypeCountries" />
+          </AssociationSet>
+          <FunctionImport Name="GetProfileswithKYC" ReturnType="Collection(WalletsModel.GetProfileswithKYC_Result)" />
+        </EntityContainer>
+        <ComplexType Name="GetProfileswithKYC_Result">
+          <Property Type="Int64" Name="ID" Nullable="false" />
+          <Property Type="Int64" Name="UserIdentifier" Nullable="true" />
+          <Property Type="String" Name="Mobile" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DOB" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="isMobileVerified" Nullable="true" />
+          <Property Type="Boolean" Name="isEmailVerified" Nullable="true" />
+          <Property Type="Boolean" Name="Status" Nullable="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Info1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Info2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="5" />
+          <Property Type="Int32" Name="KYCRating" Nullable="true" />
+          <Property Type="Int64" Name="ID1" Nullable="true" />
+          <Property Type="Int64" Name="ProfileID" Nullable="true" />
+          <Property Type="DateTime" Name="DOB1" Nullable="true" Precision="16" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="Nationality" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="PlaceOfBirth" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IDProof1No" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IDProof1ImageURL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IDProof1ImageURL2" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IDProof2No" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IDProof2ImageURL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IDProof2ImageURL2" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IDProof3No" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IDProof3ImageURL" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IDProof3ImageURL2" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Info11" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Info21" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WalletsModelStoreContainer" CdmEntityContainer="WalletsEntities">
+          <EntitySetMapping Name="KYCParameters">
+            <EntityTypeMapping TypeName="WalletsModel.KYCParameter">
+              <MappingFragment StoreEntitySet="KYCParameters">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KYCAlias" ColumnName="KYCAlias" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="isFirstNameRequired" ColumnName="isFirstNameRequired" />
+                <ScalarProperty Name="isLastNameRequired" ColumnName="isLastNameRequired" />
+                <ScalarProperty Name="isFullNameRequired" ColumnName="isFullNameRequired" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="isDOBRequired" ColumnName="isDOBRequired" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="isGenderRequired" ColumnName="isGenderRequired" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="isNationalityRequired" ColumnName="isNationalityRequired" />
+                <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+                <ScalarProperty Name="isPlaceOfBirthRequired" ColumnName="isPlaceOfBirthRequired" />
+                <ScalarProperty Name="IDProofNo1Label" ColumnName="IDProofNo1Label" />
+                <ScalarProperty Name="isIDProof1Required" ColumnName="isIDProof1Required" />
+                <ScalarProperty Name="isProof1DoublePaged" ColumnName="isProof1DoublePaged" />
+                <ScalarProperty Name="IDProofNo2Label" ColumnName="IDProofNo2Label" />
+                <ScalarProperty Name="isIDProof2Required" ColumnName="isIDProof2Required" />
+                <ScalarProperty Name="isProof2DoublePaged" ColumnName="isProof2DoublePaged" />
+                <ScalarProperty Name="IDProofNo3Label" ColumnName="IDProofNo3Label" />
+                <ScalarProperty Name="isIDProof3Required" ColumnName="isIDProof3Required" />
+                <ScalarProperty Name="isProof3DoublePaged" ColumnName="isProof3DoublePaged" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="Info3" ColumnName="Info3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KYCParametersCountries">
+            <EntityTypeMapping TypeName="WalletsModel.KYCParametersCountry">
+              <MappingFragment StoreEntitySet="KYCParametersCountries">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="KYCParametersID" ColumnName="KYCParametersID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KYCRatingRules">
+            <EntityTypeMapping TypeName="WalletsModel.KYCRatingRule">
+              <MappingFragment StoreEntitySet="KYCRatingRules">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RuleType" ColumnName="RuleType" />
+                <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+                <ScalarProperty Name="LimitType" ColumnName="LimitType" />
+                <ScalarProperty Name="LimitValue" ColumnName="LimitValue" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="Configuration" ColumnName="Configuration" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KYCRatingValidations">
+            <EntityTypeMapping TypeName="WalletsModel.KYCRatingValidation">
+              <MappingFragment StoreEntitySet="KYCRatingValidations">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ValidationType" ColumnName="ValidationType" />
+                <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+                <ScalarProperty Name="MinAmt" ColumnName="MinAmt" />
+                <ScalarProperty Name="MaxAmt" ColumnName="MaxAmt" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="Configuration" ColumnName="Configuration" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Profiles">
+            <EntityTypeMapping TypeName="WalletsModel.Profile">
+              <MappingFragment StoreEntitySet="Profiles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserIdentifier" ColumnName="UserIdentifier" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="isMobileVerified" ColumnName="isMobileVerified" />
+                <ScalarProperty Name="isEmailVerified" ColumnName="isEmailVerified" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProfilesKYCs">
+            <EntityTypeMapping TypeName="WalletsModel.ProfilesKYC">
+              <MappingFragment StoreEntitySet="ProfilesKYC">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+                <ScalarProperty Name="IDProof1No" ColumnName="IDProof1No" />
+                <ScalarProperty Name="IDProof1ImageURL" ColumnName="IDProof1ImageURL" />
+                <ScalarProperty Name="IDProof1ImageURL2" ColumnName="IDProof1ImageURL2" />
+                <ScalarProperty Name="IDProof2No" ColumnName="IDProof2No" />
+                <ScalarProperty Name="IDProof2ImageURL" ColumnName="IDProof2ImageURL" />
+                <ScalarProperty Name="IDProof2ImageURL2" ColumnName="IDProof2ImageURL2" />
+                <ScalarProperty Name="IDProof3No" ColumnName="IDProof3No" />
+                <ScalarProperty Name="IDProof3ImageURL" ColumnName="IDProof3ImageURL" />
+                <ScalarProperty Name="IDProof3ImageURL2" ColumnName="IDProof3ImageURL2" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProfilesKYCHistories">
+            <EntityTypeMapping TypeName="WalletsModel.ProfilesKYCHistory">
+              <MappingFragment StoreEntitySet="ProfilesKYCHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProfileKYCID" ColumnName="ProfileKYCID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="ActionDescription" ColumnName="ActionDescription" />
+                <ScalarProperty Name="ActionStatus" ColumnName="ActionStatus" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanctionsLists">
+            <EntityTypeMapping TypeName="WalletsModel.SanctionsList">
+              <MappingFragment StoreEntitySet="SanctionsList">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="DOBDate" ColumnName="DOBDate" />
+                <ScalarProperty Name="DOBMonth" ColumnName="DOBMonth" />
+                <ScalarProperty Name="DOBYear" ColumnName="DOBYear" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="NationalIdentityNumber" ColumnName="NationalIdentityNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="Info3" ColumnName="Info3" />
+                <ScalarProperty Name="Info4" ColumnName="Info4" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="SourceDocInformation" ColumnName="SourceDocInformation" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wallets">
+            <EntityTypeMapping TypeName="WalletsModel.Wallet">
+              <MappingFragment StoreEntitySet="Wallet">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProfleID" ColumnName="ProfleID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WalletAccounts">
+            <EntityTypeMapping TypeName="WalletsModel.WalletAccount">
+              <MappingFragment StoreEntitySet="WalletAccounts">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WalletID" ColumnName="WalletID" />
+                <ScalarProperty Name="WalletTypeID" ColumnName="WalletTypeID" />
+                <ScalarProperty Name="UserIdentifier" ColumnName="UserIdentifier" />
+                <ScalarProperty Name="UseCustomerLogin" ColumnName="UseCustomerLogin" />
+                <ScalarProperty Name="SMSAuthenticatedTransaction" ColumnName="SMSAuthenticatedTransaction" />
+                <ScalarProperty Name="CVVAuthentcatedTransaction" ColumnName="CVVAuthentcatedTransaction" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="Info3" ColumnName="Info3" />
+                <ScalarProperty Name="Info4" ColumnName="Info4" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="WalletTypeCountryID" ColumnName="WalletTypeCountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WalletTransactions">
+            <EntityTypeMapping TypeName="WalletsModel.WalletTransaction">
+              <MappingFragment StoreEntitySet="WalletTransactions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WalletAccountID" ColumnName="WalletAccountID" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="WalletTypeID" ColumnName="WalletTypeID" />
+                <ScalarProperty Name="UserIdentifier" ColumnName="UserIdentifier" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="TransactionRef" ColumnName="TransactionRef" />
+                <ScalarProperty Name="UserMobile" ColumnName="UserMobile" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="PaymentService" ColumnName="PaymentService" />
+                <ScalarProperty Name="PaymentReference" ColumnName="PaymentReference" />
+                <ScalarProperty Name="PaymentAccountType" ColumnName="PaymentAccountType" />
+                <ScalarProperty Name="PaymentStatusDescription" ColumnName="PaymentStatusDescription" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="TransactionCurrency" ColumnName="TransactionCurrency" />
+                <ScalarProperty Name="TransactionStatus" ColumnName="TransactionStatus" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WalletTypeCountries">
+            <EntityTypeMapping TypeName="WalletsModel.WalletTypeCountry">
+              <MappingFragment StoreEntitySet="WalletTypeCountries">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WalletTypeID" ColumnName="WalletTypeID" />
+                <ScalarProperty Name="WalletName" ColumnName="WalletName" />
+                <ScalarProperty Name="WalletCode" ColumnName="WalletCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="isDefault" ColumnName="isDefault" />
+                <ScalarProperty Name="KYCParameterID" ColumnName="KYCParameterID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WalletTypes">
+            <EntityTypeMapping TypeName="WalletsModel.WalletType">
+              <MappingFragment StoreEntitySet="WalletTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="WalletTypeName" ColumnName="WalletTypeName" />
+                <ScalarProperty Name="UseCustomerLogin" ColumnName="UseCustomerLogin" />
+                <ScalarProperty Name="SMSAuthenticatedTransaction" ColumnName="SMSAuthenticatedTransaction" />
+                <ScalarProperty Name="CVVAuthentcatedTransaction" ColumnName="CVVAuthentcatedTransaction" />
+                <ScalarProperty Name="Image1" ColumnName="Image1" />
+                <ScalarProperty Name="Image2" ColumnName="Image2" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetProfileswithKYC" FunctionName="WalletsModel.Store.GetProfileswithKYC">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="WalletsModel.GetProfileswithKYC_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserIdentifier" ColumnName="UserIdentifier" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="isMobileVerified" ColumnName="isMobileVerified" />
+                <ScalarProperty Name="isEmailVerified" ColumnName="isEmailVerified" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Info1" ColumnName="Info1" />
+                <ScalarProperty Name="Info2" ColumnName="Info2" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="KYCRating" ColumnName="KYCRating" />
+                <ScalarProperty Name="ID1" ColumnName="ID1" />
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="DOB1" ColumnName="DOB1" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+                <ScalarProperty Name="IDProof1No" ColumnName="IDProof1No" />
+                <ScalarProperty Name="IDProof1ImageURL" ColumnName="IDProof1ImageURL" />
+                <ScalarProperty Name="IDProof1ImageURL2" ColumnName="IDProof1ImageURL2" />
+                <ScalarProperty Name="IDProof2No" ColumnName="IDProof2No" />
+                <ScalarProperty Name="IDProof2ImageURL" ColumnName="IDProof2ImageURL" />
+                <ScalarProperty Name="IDProof2ImageURL2" ColumnName="IDProof2ImageURL2" />
+                <ScalarProperty Name="IDProof3No" ColumnName="IDProof3No" />
+                <ScalarProperty Name="IDProof3ImageURL" ColumnName="IDProof3ImageURL" />
+                <ScalarProperty Name="IDProof3ImageURL2" ColumnName="IDProof3ImageURL2" />
+                <ScalarProperty Name="Info11" ColumnName="Info11" />
+                <ScalarProperty Name="Info21" ColumnName="Info21" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace iBand.Models.Inputs.Subscription
+{
+    public class ServiceByCategory
+    {
+        public string countryid { get; set; }
+        public string categoryid { get; set; }
+        public string userid { get; set; }
+    }
+}

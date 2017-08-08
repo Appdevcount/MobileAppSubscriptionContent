@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3EC8AB5-7CFE-40DB-8D80-B5109D584098}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iBand.DAL</RootNamespace>
+    <AssemblyName>iBand.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Artist.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPayment.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingPaymentsConfiguration.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contestant.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContestantsReports_Day.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContestantsReports_Hour.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContestantsReports_Month.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContestantsReports_Year.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDevice.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMobileNoHistory.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOTP.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOTP_SMSs.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWallet.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWalletTransaction.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWalletTransactionsCredit.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWalletTransactionsDebit.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetProfileswithKYC_Result.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iBand.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iBand.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iBand.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="iBand.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iBand.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveService.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveServiceConfig.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveServiceContestant.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveServiceContestantsVote.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InteractiveServiceUserMessage.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KYCParameter.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KYCParametersCountry.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KYCRatingRule.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KYCRatingValidation.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoyaltyCardCompany.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoyaltyCardType.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoyaltyCustomerCard.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Merchant.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantCategory.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantCustomerRequest.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantInvoice.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantItem.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantItemImage.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantOrder.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantOrderItem.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantRequest.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantTransaction.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantUser.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantUserCategory.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantWalletBalanceHistory_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaMaster.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MyPaymentService.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewLoyaltyCard.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operator.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayitiSY.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayitMerchantsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayitMerchantsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayitMerchantsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayitMerchantsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayitMerchantsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilesKYC.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilesKYCHistory.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RBT.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RBTMeta.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SanctionsList.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesConfig.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerDevices_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerHistory_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerOTPs_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerRequests_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_Customers_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerTransactions_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_CustomerWallets_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_GetPaymentInvoices_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sp_MerchantWallets_Result.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategory.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_Billing.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_BillingHistory.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ContentData.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ContentDelivery.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ContentGroupConfig.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ContentGroups.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ContentOwners.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ServiceChannelContentConfig.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ServiceChannelContentForCountry.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_ServiceChannels.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_Services.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_UserServiceChannels.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subs_UserSubscriptions.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Action_Privileges.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Menu_Master.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_Roles_Previleges.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Role_Master.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_User_Master.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempTone.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdPartyApp.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdPartyAppPrivilege.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdPartyPrivilege.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty_knet_trans.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tone.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Translation.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TVChannel.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserFavourite.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserOperator.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsersNWalletPrivilege.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserWallet.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USP_Get_Action_Privileges_Result.cs">
+      <DependentUpon>iBand.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Wallet.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletAccount.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletImage.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WalletModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WalletModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WalletService.cs">
+      <DependentUpon>PayitMerchantsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletTransaction.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletType.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WalletTypeCountry.cs">
+      <DependentUpon>WalletModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="iBand.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>iBand.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="iBand.edmx.diagram">
+      <DependentUpon>iBand.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PayitMerchantsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PayitMerchantsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PayitMerchantsModel.edmx.diagram">
+      <DependentUpon>PayitMerchantsModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="WalletModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WalletModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="WalletModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WalletModel.edmx</DependentUpon>
+      <LastGenOutput>WalletModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="WalletModel.edmx.diagram">
+      <DependentUpon>WalletModel.edmx</DependentUpon>
+    </None>
+    <None Include="WalletModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WalletModel.edmx</DependentUpon>
+      <LastGenOutput>WalletModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iBand.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>iBand.edmx</DependentUpon>
+      <LastGenOutput>iBand.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="iBand.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>iBand.edmx</DependentUpon>
+      <LastGenOutput>iBand.cs</LastGenOutput>
+    </Content>
+    <Content Include="PayitMerchantsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayitMerchantsModel.edmx</DependentUpon>
+      <LastGenOutput>PayitMerchantsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PayitMerchantsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PayitMerchantsModel.edmx</DependentUpon>
+      <LastGenOutput>PayitMerchantsModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
